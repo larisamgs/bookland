@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="books-css.css">
+    <title>Book Land</title>
+</head>
+
+<body>
+    <header>
+        <div id="header-left">
+            <img src="images/icons/readingtranspbg.png" alt="icon carti">
+            <p>One does not simply have <q>too many books</q></p>
+        </div>
+        <div id="logo">
+            <h2>Book Land</h2>
+        </div>
+        <div id="header-right">
+            <div id="contul-meu-info">
+                <a>Autentificare</a>
+                <div id="contul-meu-info-hidden-btn">
+                    <a id="intra-in-cont">Intra in cont</a>
+                    <div id="conectare-modal-container">
+                        <div id="conectare-modal">
+                            <span id="x-conectare-modal">&times;</span>
+                            <form>
+                                <label for="email">Utilizator</label>
+                                <input type="email" name="email" placeholder="Introdu adresa de e-mail">
+                                <label for="user-password">Parola</label>
+                                <input type="password" name="user-password" placeholder="Introdu parola">
+                                <button type="submit">Conecteaza-te</button>
+                                <span id="forgot-upass"><a href="#">Ai uitat parola?</a></span>
+                                <label>
+                                        <input type="checkbox" checked="checked" name="remember-user">Pastreaza datele mele
+                                </label>
+                            </form>
+                        </div>
+                    </div>
+                    <a href="books-new-acount.html">Cont nou</a>
+                    <a id="deconectare">Deconectare</a>
+                </div>
+
+            </div>
+            <a id="facorite">Favorite</a>
+            <a id="cos-cumparaturi">Cos de cumparaturi</a>
+        </div>
+    </header>
+    <nav>
+        <div id="book-genre-menu">
+            <div>
+                <p id="book-categ-title">Categorii de carti</p>
+            </div>
+            <div id="book-genre">
+                <a href="">Clasic</a>
+                <a href="">Romance</a>
+                <a href="">Crime</a>
+                <a href="">Mister, thriller</a>
+                <a href="">SF</a>
+                <a href="">Fantasy, aventura</a>
+                <a href="">Horror</a>
+            </div>
+        </div>
+        <div id="website-search">
+            <input type="text" id="search-btn">
+            <button type="submit" id="submit-search-entry">Cauta</button>
+        </div>
+    </nav>
+    <main>
+        <div id="info-BookLand">
+            <p>Livrare în 2-3 zile lucrătoare</p>
+            <p>Transport gratuit la comenzi de peste 119 lei</p>
+            <p>Retur in 30 de zile</p>
+        </div>
+        <div id="carousel-container">
+            <button class="arrow-btns" id="previous-btn" onclick="plusSlideImgs(-1)">&#8678;</button>
+            <button class="arrow-btns" id="next-btn" onclick="plusSlideImgs(1)">&#8680;</button>
+            <ul id="carousel">
+                <li id="new-in" class="carousel-slide">
+                    <img src="images/noutaticarti.jpg" alt="noutati carti">
+                </li>
+                <li id="discount" class="carousel-slide">
+                    <img src="images/booktea.jpg" alt="Oferta carti 2+1 gratis">
+                </li>
+                <li id="newsletter" class="carousel-slide">
+                    <a href="#"><img src="images/newsletter1.jpg" alt="Abonare newsletter"></a>
+                </li>
+            </ul>
+        </div>
+    </main>
+    <section>
+        <h3>Cele mai citite carti</h3>
+        <div id="most-read">
+            <div class="most-read-books">
+                <div class="img-book-genre-div">
+                    <img src="images/book-genre/dragosteaholerei.jpg" alt="Dragostea in vremea holerei de Gabriel Garcia Marquez">
+                </div>
+                <h4>Dragostea in vremea holerei</h4>
+                <p>Gabriel Garcia Marquez</p>
+                <p>44 lei</p>
+                <button type="button" class="more-details-btn">Detalii</button>
+                <div class="moreDetails-modal">
+                    <div class="modal-content">
+                        <span class="close-modal">&times;</span>
+                        <div class="modalImg">
+                            <img src="images/book-genre/dragosteaholerei.jpg" alt="Dragostea in vremea holerei de Gabriel Garcia Marquez">
+                        </div>
+                        <div class="modalElements">
+                            <h3 class="bookTitle-modal">Dragostea in vremea holerei</h3>
+                            <p class="bookAuthor-modal"> de Gabriel Garcia Marquez</p>
+                            <p class="bookDescription-modal">În tinereţe, Florentino Ariza şi Fermina Daza trăiseră o pasionantă poveste de dragoste. Numai că viaţa îţi rezervă uneori surprize... La început, când Florentino află că Fermina se va căsători cu un doctor bogat, simte că
+                                viaţa lui s-a sfârşit. Deşi îşi găseşte echilibrul, bucurându-se de succes în afaceri şi nu numai... (cele 622 de relaţii amoroase ar putea confirma acest lucru), dragostea lui pentru Fermina rămâne la fel de puternică.
+                                Aşa că după 50 de ani, 9 luni şi 4 zile de despărţire, Florentino îşi reînnoieşte declaraţia de dragoste în faţa femeii visurilor lui. I se va mai oferi, oare, şansa unui nou început?</p>
+                            <p class="bookPrice-modal">44 lei</p>
+                            <button type="button" class="bookBuy-modal">Adauga in cos</button>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="add-to-cart-btn">Adauga in cos</button>
+            </div>
+
+            <div class="most-read-books">
+                <div class="img-book-genre-div">
+                    <img src="images/book-genre/zecenegrimititei.jpeg" alt="Zece negri mititei de Agatha Christie">
+                </div>
+                <h4>Zece negri mititei</h4>
+                <p>Agatha Christie</p>
+                <p>34 lei</p>
+                <button type="button" class="more-details-btn">Detalii</button>
+                <div class="moreDetails-modal">
+                    <div class="modal-content">
+                        <span class="close-modal">&times;</span>
+                        <div class="modalImg">
+                            <img src="images/book-genre/zecenegrimititei.jpeg" alt="Zece negri mititei de Agatha Christie">
+                        </div>
+                        <div class="modalElements">
+                            <h3 class="bookTitle-modal">Zece negri mititei</h3>
+                            <p class="bookAuthor-modal">de Agatha Christie</p>
+                            <p class="bookDescription-modal">"Zece..." Zece străini sunt atraşi de un misterios U.N. Owen, într-o casă de pe o insulă izolată, din apropierea Devon-ului. "Nouă... " În timpul cinei, un mesaj înregistrat îi acuză pe fiecare în parte de câte o crimă, iar
+                                în final, în aceeaşi seară, unul dintre oaspeţi moare. "Opt... " Rupţi de lume din cauza unei furtuni violente şi urmăriţi de versurile unei vechi poezii pentru copii, care numără descrescător de la zece la zero, oaspeţii
+                                lui U.N. Owen încep, unul câte unul, să moară. "Şapte... " Care dintre ei este criminalul? Oare va supravieţui cineva?</p>
+                            <p class="bookPrice-modal">34 lei</p>
+                            <button type="button" class="bookBuy-modal">Adauga in cos</button>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="add-to-cart-btn">Adauga in cos</button>
+            </div>
+
+            <div class="most-read-books">
+                <div class="img-book-genre-div">
+                    <img src="images/book-genre/dune.jpeg" alt="Dune de Frank Herbert">
+                </div>
+                <h4>Dune</h4>
+                <p>Frank Herbert</p>
+                <p>49 lei</p>
+                <button type="button" class="more-details-btn">Detalii</button>
+                <div class="moreDetails-modal">
+                    <div class="modal-content">
+                        <span class="close-modal">&times;</span>
+                        <div class="modalImg">
+                            <img src="images/book-genre/dune.jpeg" alt="Dune de Frank Herbert">
+                        </div>
+                        <div class="modalElements">
+                            <h3 class="bookTitle-modal">Dune</h3>
+                            <p class="bookAuthor-modal">de Frank Herbert</p>
+                            <p class="bookDescription-modal">Intr-un viitor indepartat, intr-un imperiu interplanetar, condus dupa reguli feudale, casele nobiliare se lupta pentru suprematie. Casa Atreides primeste controlul asupra planetei Arrakis, singura sursa de mirodenie, cea mai
+                                valoroasa si importanta substanta din univers. Asta adanceste vechea rivalitate dintre Casele Atreides si Harkonnen. Leto Atreides si familia lui se vor confrunta nu doar cu o planeta desertica, neprietenoasa si necunoscuta
+                                ci si cu comploturi politice periculoase.</p>
+                            <p class="bookPrice-modal">49 lei</p>
+                            <button type="button" class="bookBuy-modal">Adauga in cos</button>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="add-to-cart-btn">Adauga in cos</button>
+            </div>
+
+            <div class="most-read-books">
+                <div class="img-book-genre-div">
+                    <img src="images/book-genre/doriaangrey.jpeg" alt="Portretul lui Dorian Gray de Oscar Wilde">
+                </div>
+                <h4>Portretul lui Dorian Gray</h4>
+                <p>Oscar Wilde</p>
+                <p>25 lei</p>
+                <button type="button" class="more-details-btn">Detalii</button>
+                <div class="moreDetails-modal">
+                    <div class="modal-content">
+                        <span class="close-modal">&times;</span>
+                        <div class="modalImg">
+                            <img src="images/book-genre/doriaangrey.jpeg" alt="Portretul lui Dorian Gray de Oscar Wilde">
+                        </div>
+                        <div class="modalElements">
+                            <h3 class="bookTitle-modal">Portretul lui Dorian Gray</h3>
+                            <p class="bookAuthor-modal">de Oscar Wilde</p>
+                            <p class="bookDescription-modal">După ce Basil Hallward pictează portretul în mărime naturală al lui Dorian Gray, un tânăr prieten al său, acesta din urmă își exprimă, în fața lordului Henry Wotton, dorința de a rămâne veșnic tânăr. Astfel, Dorian ajunge să
+                                ducă o viață dublă, complăcându-se în plăceri interzise și păstrând, pe de altă parte, o aparență de respectabilitate. În acest timp, tânărul din tablou îmbătrânește, pe când modelul lui rămâne neschimbat.</p>
+                            <p class="bookPrice-modal">25 lei</p>
+                            <button type="button" class="bookBuy-modal">Adauga in cos</button>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="add-to-cart-btn">Adauga in cos</button>
+            </div>
+
+            <div class="most-read-books">
+                <div class="img-book-genre-div">
+                    <img src="images/book-genre/dracula.jpg" alt="Dracula de Bram Stoker">
+                </div>
+                <h4>Dracula</h4>
+                <p>Bram Stoker</p>
+                <p>24 lei</p>
+                <button type="button" class="more-details-btn">Detalii</button>
+                <div class="moreDetails-modal">
+                    <div class="modal-content">
+                        <span class="close-modal">&times;</span>
+                        <div class="modalImg">
+                            <img src="images/book-genre/dracula.jpg" alt="Dracula de Bram Stoker">
+                        </div>
+                        <div class="modalElements">
+                            <h3 class="bookTitle-modal">Dracula</h3>
+                            <p class="bookAuthor-modal">de Bram Stoker</p>
+                            <p class="bookDescription-modal">Când Jonathan Harker primeşte o scrisoare de la Contele Dracula, în care e invitat la castelul acestuia din inima Carpaţilor, tânărul avocat englez se pregăteşte numaidecât de călătorie, ignorând semnele şi superstiţiile pe
+                                care le tot şoptesc localnicii. Prizonier în inima pădurii, bărbatul se va găsi înconjurat de mistere şi demoni străvechi, cu chip de femeie, care dispar odată cu răsăritul. Sau, poate, doar şi le-a imaginat...?</p>
+                            <p class="bookPrice-modal">24 lei</p>
+                            <button type="button" class="bookBuy-modal">Adauga in cos</button>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="add-to-cart-btn">Adauga in cos</button>
+            </div>
+
+            <div class="most-read-books">
+                <div class="img-book-genre-div">
+                    <img src="images/book-genre/1984.jpeg" alt="1984 de George Orwell">
+                </div>
+                <h4>1984</h4>
+                <p>George Orwell</p>
+                <p>28 lei</p>
+                <button type="button" class="more-details-btn">Detalii</button>
+                <div class="moreDetails-modal">
+                    <div class="modal-content">
+                        <span class="close-modal">&times;</span>
+                        <div class="modalImg">
+                            <img src="images/book-genre/1984.jpeg" alt="1984 de George Orwell">
+                        </div>
+                        <div class="modalElements">
+                            <h3 class="bookTitle-modal">1984</h3>
+                            <p class="bookAuthor-modal">de George Orwell</p>
+                            <p class="bookDescription-modal">Winston Smith este un personaj obişnuit: el urăşte, iubeşte şi munceşte ca oricare alt om. Ceea ce-l face deosebit este faptul că trăieşte într-o lume infernală, în care a urî, a iubi sau a munci sînt gînduri venite dintr-un
+                                efort supraomenesc al fiecărei clipe. Romanul O mie nouă sute optzeci şi patru descrie tabloul apocaliptic al unei Londre din era postatomică, locul de naştere al unui regim totalitar în care orice logică pare să fi fost
+                                abolită. Execuţiile fără rost, dispariţiile peste noapte au devenit fireşti. Trecutul este rescris mereu pentru a legitima crimele prezentului, iar instrumentul propagandei este odioasa „neolimbă”, o limbă robotizată, ce
+                                completează imaginea de lume ordonată „ştiinţific” după voinţa Fratelui cel Mare, care spune că „războiul este pace, libertatea este sclavie, ignoranţa este putere”.</p>
+                            <p class="bookPrice-modal">28 lei</p>
+                            <button type="button" class="bookBuy-modal">Adauga in cos</button>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="add-to-cart-btn">Adauga in cos</button>
+            </div>
+
+            <div class="most-read-books">
+                <div class="img-book-genre-div">
+                    <img src="images/book-genre/harrypotter.jpeg" alt="Harry Potter de J.K. Rowling">
+                </div>
+                <h4>Harry Potter</h4>
+                <p>J.K. Rowling</p>
+                <p>42 lei</p>
+                <button type="button" class="more-details-btn">Detalii</button>
+                <div class="moreDetails-modal">
+                    <div class="modal-content">
+                        <span class="close-modal">&times;</span>
+                        <div class="modalImg">
+                            <img src="images/book-genre/harrypotter.jpeg" alt="Harry Potter de J.K. Rowling">
+                        </div>
+                        <div class="modalElements">
+                            <h3 class="bookTitle-modal">Harry Potter</h3>
+                            <p class="bookAuthor-modal">de J.K. Rowling</p>
+                            <p class="bookDescription-modal">Viața lui Harry Potter se schimbă pentru totdeauna în ziua aniversării a unsprezece ani, când uriașul Rubeus Hagrid îi aduce o scrisoare și câteva vești uimitoare. Harry Potter nu-i vreun băiat obișnuit: e vrăjitor. O aventură
+                                extraordinară stă să înceapă...</p>
+                            <p class="bookPrice-modal">42 lei</p>
+                            <button type="button" class="bookBuy-modal">Adauga in cos</button>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="add-to-cart-btn">Adauga in cos</button>
+            </div>
+
+            <div class="most-read-books">
+                <div class="img-book-genre-div">
+                    <img src="images/book-genre/colectionarul.jpeg" alt="Colectionarul de John Fowles">
+                </div>
+                <h4>Colectionarul</h4>
+                <p>John Fowles</p>
+                <p>23 lei</p>
+                <button type="button" class="more-details-btn">Detalii</button>
+                <div class="moreDetails-modal">
+                    <div class="modal-content">
+                        <span class="close-modal">&times;</span>
+                        <div class="modalImg">
+                            <img src="images/book-genre/colectionarul.jpeg" alt="Colectionarul de John Fowles">
+                        </div>
+                        <div class="modalElements">
+                            <h3 class="bookTitle-modal">Colectionarul</h3>
+                            <p class="bookAuthor-modal">de John Fowles</p>
+                            <p class="bookDescription-modal">Un tinar timid, asocial, el este usor-usor cuprins de nevinovata bucurie de a colectiona obiecte. Odata cu primirea unei mosteniri consistente, mica lui placere ia proportii si ajunge treptat sa-i domine viata. Destinul sau
+                                capata o intorsatura neobisnuita atunci cind rapeste si sechestreaza o studenta la Arte Frumoase, incercind sa stabileasca astfel o legatura afectiva imposibila intre el si victima.</p>
+                            <p class="bookPrice-modal">23 lei</p>
+                            <button type="button" class="bookBuy-modal">Adauga in cos</button>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="add-to-cart-btn">Adauga in cos</button>
+            </div>
+
+        </div>
+    </section>
+    <article>
+        <div id="article-links">
+            <a href="#">Despre <span id="about-us">Book Land</span></a>
+            <a href="#">Livrare si retur</a>
+            <a href="#">Termeni si conditii</a>
+            <a href="#">Confidentialitate & cookies</a>
+        </div>
+        <div id="contact-us">
+            <h4>Ai o intrebare? Contacteaza-ne:</h4>
+            <p>Luni - Duminica intre orele<time>10:00</time>-<time>16:00</time></p>
+            <p>Telefon: <a href="tel:+00123456789">+00123456789</a></p>
+            <p>Email: <a href="mailto:bookland-customersupport@gmail.com">bookland-customersupport@gmail.com</a></p>
+        </div>
+    </article>
+    <footer>
+        <div id="copyright">
+            <p>&copy;Book Land, all rights reserved</p>
+        </div>
+    </footer>
+    <script src="books-javascript.js"></script>
+</body>
+
+</html>

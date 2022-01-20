@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="books-css.css">
+    <title>Book Land - Creeaza cont</title>
+</head>
+
+<body>
+    <div id="inregistr-cont-nou-container">
+        <div id="inregistr-cont-nou">
+            <h2>Creeaza Cont</h2>
+            <p>Te rugam sa completezi acest formular pentru a crea un cont nou.</p>
+            <p>Campurile marcate cu &#9913 sunt obligatorii.</p>
+
+            <label for="nume-pren">Nume si Prenume&#9913</label>
+            <input type="text" name="nume-pren" placeholder="Introdu nume si prenume" required>
+
+            <label for="nume-utiliz">Nume utilizator</label>
+            <input type="text" name="nume-utiliz" placeholder="Introdu numele de utilizator">
+
+            <label for="data-nast">Data nasterii</label>
+            <input type="date" name="data-nast" placeholder="Introdu data nasterii">
+
+            <label for="e-mail"> Adresa de e-mail&#9913</label>
+            <input type="e-mail" name="e-email" placeholder="Introdu adresa de e-mail" required>
+
+            <label for="nr-tel">Numar de telefon&#9913</label>
+            <input type="tel" name="nr-tel" placeholder="Introdu numarul de telefon" required>
+
+            <label for="judet">Selecteaza judetul&#9913</label>
+            <select name="judet" required>
+                <option value="arad-jud">Arad</option>
+                <option value="bihor">Bihor</option>
+                <option value="brasov-jud">Brasov</option>
+                <option value="cluj">Cluj</option>
+                <option value="constanta-jud">Constanta</option>
+                <option value="dolj">Dolj</option>
+                <option value="hunedoara-jud">Hunedoara</option>
+                <option value="iasi-jud">Iasi</option>
+                <option value="ilfov">Ilfov</option>
+                <option value="marammures">Maramures</option>
+                <option value="mures">Mures</option>
+                <option value="prahova">Prahova</option>
+                <option value="sibiu-jud">Sibiu</option>
+                <option value="timis">Timis</option>
+                <option value="vrancea">Vrancea</option>
+            </select>
+            <!-- <input type="text" name="judet" placeholder="Introdu judetul" required> -->
+
+            <label for="oras">Orasul&#9913</label>
+            <!-- <select name="oras" required>
+                <option value="arad-oras">Arad</option>
+                <option value="baia-mare">Baia Mare</option>
+                <option value="brasov-oras">Brasov</option>
+                <option value="bucuresti">Bucuresti</option>
+                <option value="cluj-napoca">Cluj-Napoca</option>
+                <option value="constanta-oras">Constanta</option>
+                <option value="craiova">Craiova</option>
+                <option value="focsani">Focsani</option>
+                <option value="hunedoara-oras">Hunedoara</option>
+                <option value="iasi-oras">Iasi</option>
+                <option value="mangalia">Mangalia</option>
+                <option value="oradea">Oradea</option>
+                <option value="predeal">Predeal</option>
+                <option value="sibiu-oras">Sibiu</option>
+                <option value="sighetu-marmatiei">Sighetu Marmatiei</option>
+                <option value="sighisoara">Sighisoara</option>
+                <option value="sinaia">Sinaia</option>
+                <option value="timisoara">Timisoara</option>
+            </select> -->
+            <input type="text" name="oras" placeholder="Introdu orasul" required>
+
+            <label for="adresa">Adresa&#9913</label>
+            <textarea name="adresa" cols="30" rows="7" required></textarea>
+
+            <label for="parola"> Parola&#9913</label>
+            <input type="password" name="parola" placeholder="Introdu parola" required>
+
+            <label for="repeta-parola">Repeta parola&#9913</label>
+            <input type="password" name="repeta-parola" placeholder="Introdu din nou parola" required>
+
+            <button type="submit" id="inregistrare-cont-utilizator">Inregistrare</button>
+            <label for="termeni-cond">
+               <input type="checkbox" checked="checked" name="termeni-cond" required> Am citit si sunt de acord cu <span id="citit-acord">Termenii si conditiile generale</span>
+            </label>
+        </div>
+    </div>
+
+
+    <script src="books-javascript.js"></script>
+</body>
+
+</html>

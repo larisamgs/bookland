@@ -1,0 +1,870 @@
+            * {
+                box-sizing: border-box;
+            }
+            
+            body {
+                margin: 1rem 1rem;
+                color: rgb(98, 62, 6);
+                font-size: 1rem;
+                font-family: Garamond, serif;
+            }
+            
+            ul {
+                list-style-type: none;
+            }
+            
+            a {
+                text-decoration: none;
+                color: rgb(92, 57, 5);
+            }
+            
+            header {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 3.5rem;
+            }
+            
+            #header-left {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            
+            #header-left>p {
+                font-family: Papyrus, fantasy;
+                font-size: 100%;
+                padding-left: 1rem;
+                color: rgb(92, 57, 5);
+            }
+            
+            #logo {
+                font-size: 140%;
+                font-weight: bolder;
+                color: rgb(190, 119, 12);
+            }
+            
+            #header-right {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                font-size: 95%;
+            }
+            
+            #header-right a {
+                padding-right: 1rem;
+            }
+            
+            #contul-meu-info {
+                position: relative;
+                display: inline-block;
+                cursor: pointer;
+            }
+            
+            #contul-meu-info-hidden-btn {
+                position: absolute;
+                display: none;
+                z-index: 1;
+            }
+            
+            #contul-meu-info-hidden-btn a {
+                display: block;
+                font-size: 98%;
+                color: rgb(190, 119, 12);
+                text-decoration: none;
+                padding: 0.3125rem;
+            }
+            
+            #header-right:hover #contul-meu-info-hidden-btn {
+                display: block;
+                background-color: #fcf9f5;
+                border: 1px solid rgb(190, 119, 12)
+            }
+            
+            #contul-meu-info-hidden-btn a:hover {
+                background-color: #e5c89d;
+            }
+            
+            #conectare-modal-container {
+                display: none;
+                /* display: block; */
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(246, 237, 225, 0.4);
+            }
+            
+            #conectare-modal {
+                position: relative;
+                margin: 0 auto;
+                top: 5%;
+                width: 40%;
+                height: 40%;
+                background-color: #f6ede1;
+                color: rgb(190, 119, 12);
+                border: 1px solid rgb(190, 119, 12);
+            }
+            
+            #x-conectare-modal {
+                position: absolute;
+                top: 0;
+                right: 0;
+                font-weight: bold;
+                padding: 0.3125rem;
+            }
+            
+            #x-conectare-modal:hover,
+            #x-conectare-modal:focus {
+                background-color: #fcf9f5;
+                color: #402703;
+                font-weight: bolder;
+                cursor: pointer;
+            }
+            
+            #conectare-modal form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 1rem;
+                box-sizing: border-box;
+            }
+            
+            label>input[type=checkbox] {
+                vertical-align: middle;
+                font-size: 0.75rem;
+                margin-left: 2px;
+            }
+            
+            form>input[type=email],
+            input[type=password] {
+                width: 100%;
+                display: block;
+                padding: 0.5rem;
+                margin: 0.5rem 0.5rem;
+                box-sizing: border-box;
+                font-size: 0.875rem;
+                color: rgb(190, 119, 12);
+                background-color: #fcf9f5;
+                border: 1px solid rgb(190, 119, 12)
+            }
+            
+            form>label {
+                font-size: 0.875rem;
+                box-sizing: border-box;
+                font-weight: bold;
+            }
+            
+            form>label:last-child {
+                font-weight: normal;
+            }
+            
+            form>button {
+                text-transform: uppercase;
+                margin: 0.5rem 0.5rem;
+                padding: 0.3125rem;
+                cursor: pointer;
+                background-color: #ead6ba;
+                color: rgb(190, 119, 12);
+                border: 1px solid rgb(190, 119, 12);
+                box-sizing: border-box;
+            }
+            
+            form>button:hover {
+                background-color: #e5c89d;
+                color: rgb(92, 57, 5);
+                font-weight: bold;
+            }
+            
+            #forgot-upass {
+                margin: 0.5rem 0.5rem;
+                margin-left: 15px;
+                cursor: pointer;
+                box-sizing: border-box;
+            }
+            
+            #forgot-upass>a {
+                padding-right: 0;
+                font-size: 0.875rem;
+                color: rgb(190, 119, 12);
+            }
+            
+            #forgot-upass>a:hover {
+                text-decoration: underline;
+                font-weight: bold;
+            }
+            
+            #header-right>a:last-child {
+                padding-right: 0.5rem;
+            }
+            
+            nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            
+            #book-genre-menu {
+                text-align: center;
+                position: relative;
+                display: inline-block;
+                cursor: pointer;
+            }
+            
+            #book-categ-title {
+                font-size: 120%;
+                font-weight: bold;
+                color: rgb(190, 119, 12);
+                margin: 0;
+            }
+            
+            #book-genre {
+                display: none;
+                position: absolute;
+                z-index: 1;
+            }
+            
+            #book-genre a {
+                display: block;
+                font-size: 110%;
+                color: rgb(190, 119, 12);
+                text-decoration: none;
+                padding: 0.625rem 1.125rem;
+            }
+            
+            #book-genre-menu a:hover {
+                background-color: #e5c89d;
+            }
+            
+            #book-genre-menu:hover #book-genre {
+                display: block;
+                background-color: #fcf9f5;
+                border: 1px solid rgb(190, 119, 12);
+            }
+            
+            #website-search {
+                width: 40%;
+                text-align: center;
+            }
+            
+            input[type="text"] {
+                width: 70%;
+                color: #130b01;
+                background-color: #e5c89d;
+                cursor: pointer;
+                border: 1px solid #be770c;
+                padding: 0.625rem 0rem;
+            }
+            
+            input[type="text"]:hover {
+                border: 1px solid #be770c;
+            }
+            
+            #submit-search-entry {
+                color: #be770c;
+                border: 1px solid #be770c;
+                padding: 0.625rem 1.125rem;
+                transition-duration: 0.3s;
+                border-radius: 7%;
+                height: 100%;
+            }
+            
+            #submit-search-entry:hover {
+                background-color: #e5c89d;
+                border: 1px solid rgb(98, 62, 6);
+            }
+            
+            #info-BookLand {
+                display: flex;
+                width: 100%;
+                justify-content: space-evenly;
+                margin-bottom: 1rem;
+            }
+            
+            main {
+                margin-top: 3rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            #carousel-container {
+                text-align: center;
+                background-color: rgb(190, 119, 12);
+                position: relative;
+            }
+            
+            .arrow-btns {
+                top: 54%;
+                position: absolute;
+                width: auto;
+                cursor: pointer;
+                display: inline-block;
+                height: auto;
+                width: auto;
+                color: rgb(92, 57, 5);
+                background: transparent no-repeat;
+                padding: 1rem;
+                font-weight: bold;
+                font-size: 2rem;
+                transition: 0.6s ease;
+                border: none;
+            }
+            
+            #previous-btn:hover,
+            #next-btn:hover {
+                background-color: rgb(229, 200, 157, 0.8);
+            }
+            
+            #previous-btn {
+                left: 0;
+                border-radius: 0 3px 3px 0;
+            }
+            
+            #next-btn {
+                right: 0;
+                border-radius: 3px 0 0 3px;
+            }
+            
+            #carousel {
+                overflow: hidden;
+                padding: 0;
+                margin: 0;
+                text-align: center;
+            }
+            
+            .carousel-slide {
+                text-align: center;
+                display: none;
+                width: 950px;
+                height: 600px;
+            }
+            
+            #carousel img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            
+            section {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            section>h3 {
+                margin: 2rem 2rem;
+            }
+            
+            #most-read {
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: auto;
+                row-gap: 3vh;
+            }
+            
+            .most-read-books {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                box-sizing: border-box;
+            }
+            
+            .most-read-books * {
+                margin: 0;
+                padding: 0.625rem 1.125rem;
+            }
+            
+            .img-book-genre-div {
+                width: 240px;
+                height: 340px;
+                box-sizing: border-box;
+            }
+            
+            .img-book-genre-div>img {
+                display: inline-block;
+                background-position: center;
+                background-size: cover;
+                width: 100%;
+                height: 100%;
+                box-sizing: border-box;
+                padding: 0;
+            }
+            
+            .more-details-btn {
+                margin-bottom: 0.625rem;
+            }
+            
+            .more-details-btn,
+            .add-to-cart-btn {
+                display: inline-block;
+                border: none;
+                cursor: pointer;
+            }
+            
+            .more-details-btn:hover,
+            .add-to-cart-btn:hover {
+                color: #be770c;
+                background-color: #e5c89d;
+            }
+            
+            .moreDetails-modal {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(246, 237, 225, 0.4);
+            }
+            
+            .modal-content {
+                background-color: #e4caa6;
+                width: 80%;
+                display: flex;
+                flex: 1;
+                margin: 0 auto;
+                position: relative;
+            }
+            
+            .bookBuy-modal:hover {
+                cursor: pointer;
+                background-color: #fcf9f5;
+                color: #402703;
+            }
+            
+            .modalElements {
+                text-align: center;
+            }
+            
+            .bookDescription-modal {
+                line-height: 1.6;
+            }
+            
+            .modalElements .bookDescription-modal {
+                text-align: justify;
+            }
+            
+            .close-modal {
+                position: absolute;
+                top: 0;
+                right: 0;
+                color: #5C3905;
+                font-weight: bold;
+            }
+            
+            .close-modal:hover,
+            .close-modal:focus {
+                background-color: #fcf9f5;
+                color: #402703;
+                font-weight: bolder;
+                cursor: pointer;
+            }
+            
+            article {
+                display: flex;
+                justify-content: space-between;
+                margin: 5rem;
+                background-color: #fcf9f5;
+            }
+            
+            #article-links {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            
+            #article-links>a {
+                margin: 0;
+                padding: 0.625rem;
+            }
+            
+            #about-us {
+                font-weight: bold;
+                color: rgb(190, 119, 12);
+            }
+            
+            #contact-us * {
+                margin: 0;
+                padding: 0.625rem;
+            }
+            
+            footer {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 90%;
+                color: rgb(190, 119, 12);
+            }
+            /* books new-account style*/
+            
+            #inregistr-cont-nou-container {
+                width: 100%;
+                height: 100%;
+            }
+            
+            #inregistr-cont-nou {
+                padding: 2rem;
+                margin: auto;
+                width: 50%;
+                margin-top: 3rem;
+                margin-bottom: 3rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: #f6ede1;
+                color: rgb(190, 119, 12);
+                border: 1px solid rgb(190, 119, 12);
+                border-radius: 0.5%;
+                box-sizing: border-box;
+                font-size: medium;
+            }
+            
+            #inregistr-cont-nou>h2,
+            p {
+                margin: 0;
+                padding-bottom: 1rem;
+            }
+            
+            #inregistr-cont-nou>input[type=text],
+            input[type=e-mail],
+            input[type=tel],
+            input[type=password] {
+                width: 100%;
+                margin: 0;
+                margin-bottom: 0.625rem;
+                color: rgb(190, 119, 12);
+                background-color: #fcf9f5;
+                border: 1px solid rgb(190, 119, 12);
+                padding: 0.3125rem;
+                box-sizing: border-box;
+                font-size: smaller;
+            }
+            
+            #inregistr-cont-nou>input[type=date],
+            select,
+            textarea {
+                width: 50%;
+                margin-bottom: 0.625rem;
+                resize: none;
+                box-sizing: border-box;
+            }
+            
+            #inregistr-cont-nou>label {
+                padding-bottom: 0.3125rem;
+                font-weight: bold;
+            }
+            
+            #inregistr-cont-nou>label:last-child {
+                font-weight: normal;
+                font-size: small;
+                margin-top: 0.625rem;
+            }
+            
+            #inregistrare-cont-utilizator {
+                width: 50%;
+                margin-bottom: 0.625rem;
+                color: rgb(190, 119, 12);
+                text-transform: uppercase;
+                padding: 0.3125rem;
+                box-sizing: border-box;
+                font-size: small;
+            }
+            
+            #inregistrare-cont-utilizator:hover,
+            #inregistrare-cont-utilizator:focus {
+                cursor: pointer;
+                background-color: #e5c89d;
+                color: rgb(92, 57, 5);
+                font-weight: bold;
+            }
+            
+            #citit-acord {
+                font-weight: bold;
+            }
+            /* media queries */
+            
+            @media screen and (max-width: 980px) {
+                #header-left>img {
+                    width: 60px;
+                    height: 60px;
+                    box-sizing: border-box;
+                }
+                #header-left>p {
+                    font-size: 95%;
+                }
+                #logo {
+                    font-size: 120%;
+                }
+                #header-right {
+                    font-size: 90%;
+                }
+                .carousel-slide {
+                    width: 850px;
+                    height: 500px;
+                }
+                #carousel img {
+                    height: auto;
+                }
+                #most-read {
+                    grid-template-columns: repeat(3, 1fr);
+                    row-gap: 2vh;
+                }
+                .modal-content {
+                    width: 90%;
+                }
+            }
+            
+            @media screen and (max-width: 875px) {
+                #header-left>img {
+                    width: 55px;
+                    height: 55px;
+                }
+                header {
+                    margin-bottom: 3.2rem;
+                }
+                #header-left>p {
+                    font-size: 85%;
+                }
+                #header-right a {
+                    padding-right: 0.75rem;
+                }
+                #logo {
+                    font-size: 110%;
+                }
+                #header-right {
+                    font-size: 80%;
+                }
+                .carousel-slide {
+                    width: 750px;
+                    height: 480px;
+                }
+                .arrow-btns {
+                    padding: 0.5rem;
+                    font-size: 1.5rem;
+                }
+                article {
+                    margin: 3rem 2rem;
+                }
+                .moreDetails-modal {
+                    overflow: scroll;
+                }
+                .modal-content {
+                    flex-direction: column;
+                    width: 75%;
+                }
+            }
+            
+            @media screen and (max-width: 780px) {
+                body {
+                    font-size: 0.875rem;
+                }
+                #header-left>img {
+                    width: 48px;
+                    height: 48px;
+                }
+                #header-right a {
+                    padding-right: 0.625rem;
+                }
+                #submit-search-entry {
+                    font-size: 0.75rem;
+                    padding: 0.75rem;
+                }
+                section>h3 {
+                    margin: 1rem 1rem;
+                }
+                .carousel-slide {
+                    width: 650px;
+                    height: 420px;
+                }
+                .img-book-genre-div {
+                    width: 220px;
+                    height: 320px;
+                }
+                .most-read-books h4 {
+                    padding: 0rem;
+                }
+                .more-details-btn,
+                .add-to-cart-btn {
+                    font-size: 90%;
+                }
+                footer {
+                    font-size: 85%;
+                }
+            }
+            
+            @media screen and (max-width: 680px) {
+                #header-left {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+                #header-left>img {
+                    width: 40px;
+                    height: 40px;
+                }
+                header {
+                    margin-bottom: 2.5rem;
+                }
+                #header-left>p {
+                    font-size: 80%;
+                    padding: 0;
+                }
+                #header-right a {
+                    padding-right: 0.3125rem;
+                }
+                #logo {
+                    font-size: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                #header-right {
+                    font-size: 75%;
+                }
+                label>input[type=checkbox] {
+                    font-size: 0.625rem;
+                }
+                form>input[type=text],
+                input[type=password] {
+                    font-size: 0.75rem;
+                }
+                form>label {
+                    font-size: 0.75rem;
+                }
+                #forgot-upass>a {
+                    font-size: 0.75rem;
+                }
+                #book-genre a {
+                    padding: 0.3125rem 1.125rem;
+                }
+                .carousel-slide {
+                    width: 550px;
+                    height: 350px;
+                }
+                #most-read {
+                    width: 80%;
+                    grid-template-columns: repeat(2, 1fr);
+                    row-gap: 1vh;
+                }
+                .img-book-genre-div {
+                    width: 200px;
+                    height: 280px;
+                }
+                article {
+                    margin: 2rem 0rem;
+                }
+                #inregistrare-cont-utilizator {
+                    font-size: x-small;
+                }
+            }
+            
+            @media screen and (max-width: 570px) {
+                body {
+                    font-size: 0.75rem;
+                }
+                #header-left>img {
+                    width: 38px;
+                    height: 38px;
+                }
+                input[type="text"] {
+                    width: 50%;
+                    font-size: 0.625rem;
+                }
+                #submit-search-entry {
+                    font-size: 0.625rem;
+                    padding: 0.625rem;
+                }
+                #info-BookLand {
+                    justify-content: space-between;
+                }
+                section>h3 {
+                    margin: 0.5rem 0.5rem;
+                }
+                .carousel-slide {
+                    width: 440px;
+                    height: 280px;
+                }
+                footer {
+                    font-size: 85%;
+                }
+                #inregistr-cont-nou {
+                    font-size: smaller;
+                }
+                #inregistr-cont-nou>input[type=text],
+                input[type=e-mail],
+                input[type=tel],
+                input[type=password] {
+                    font-size: small;
+                    padding: 0.125rem;
+                }
+                #inregistr-cont-nou>label:last-child {
+                    font-size: xx-small;
+                }
+                #inregistrare-cont-utilizator {
+                    font-size: xx-small;
+                }
+            }
+            
+            @media screen and (max-width: 480px) {
+                #header-left>img {
+                    width: 35px;
+                    height: 35px;
+                }
+                #logo h2 {
+                    margin-right: 1.2rem;
+                }
+                #header-right {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+                }
+                label>input[type=checkbox] {
+                    font-size: 0.5rem;
+                }
+                form>input[type=text],
+                input[type=password] {
+                    font-size: 0.625rem;
+                }
+                form>label {
+                    font-size: 0.625rem;
+                }
+                #forgot-upass>a {
+                    font-size: 0.625rem;
+                }
+                .carousel-slide {
+                    width: 405px;
+                    height: 240px;
+                }
+                #most-read {
+                    grid-template-columns: 1fr;
+                }
+                #info-BookLand {
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                }
+                article {
+                    margin: 2rem;
+                    background-color: #fcf9f5;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 1rem;
+                }
+                #article-links,
+                #contact-us {
+                    text-align: center;
+                }
+            }
