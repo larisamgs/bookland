@@ -14,25 +14,25 @@
         <div id="inregistr-cont-nou">
             <h2>Creeaza Cont</h2>
             <p>Te rugam sa completezi acest formular pentru a crea un cont nou.</p>
-            <p>Campurile marcate cu &#9913 sunt obligatorii.</p>
+            <p>Campurile marcate cu &#9913; sunt obligatorii.</p>
 
-            <label for="nume-pren">Nume si Prenume&#9913</label>
+            <label for="nume-pren">Nume si Prenume&#9913;</label>
             <input type="text" name="nume-pren" placeholder="Introdu nume si prenume" required>
 
             <label for="nume-utiliz">Nume utilizator</label>
             <input type="text" name="nume-utiliz" placeholder="Introdu numele de utilizator">
 
             <label for="data-nast">Data nasterii</label>
-            <input type="date" name="data-nast" placeholder="Introdu data nasterii">
+            <input type="date" name="data-nast">
 
-            <label for="e-mail"> Adresa de e-mail&#9913</label>
-            <input type="e-mail" name="e-email" placeholder="Introdu adresa de e-mail" required>
+            <label for="e-mail"> Adresa de e-mail&#9913;</label>
+            <input type="email" name="e-email" placeholder="Introdu adresa de e-mail" required>
 
-            <label for="nr-tel">Numar de telefon&#9913</label>
+            <label for="nr-tel">Numar de telefon&#9913;</label>
             <input type="tel" name="nr-tel" placeholder="Introdu numarul de telefon" required>
 
-            <label for="judet">Selecteaza judetul&#9913</label>
-            <select name="judet" required>
+            <label for="judet">Selecteaza judetul</label>
+            <select name="judet">
                 <option value="arad-jud">Arad</option>
                 <option value="bihor">Bihor</option>
                 <option value="brasov-jud">Brasov</option>
@@ -51,7 +51,7 @@
             </select>
             <!-- <input type="text" name="judet" placeholder="Introdu judetul" required> -->
 
-            <label for="oras">Orasul&#9913</label>
+            <label for="oras">Orasul</label>
             <!-- <select name="oras" required>
                 <option value="arad-oras">Arad</option>
                 <option value="baia-mare">Baia Mare</option>
@@ -72,20 +72,20 @@
                 <option value="sinaia">Sinaia</option>
                 <option value="timisoara">Timisoara</option>
             </select> -->
-            <input type="text" name="oras" placeholder="Introdu orasul" required>
+            <input type="text" name="oras" placeholder="Introdu orasul">
 
-            <label for="adresa">Adresa&#9913</label>
+            <label for="adresa">Adresa&#9913;</label>
             <textarea name="adresa" cols="30" rows="7" required></textarea>
 
-            <label for="parola"> Parola&#9913</label>
+            <label for="parola"> Parola&#9913;</label>
             <input type="password" name="parola" placeholder="Introdu parola" required>
 
-            <label for="repeta-parola">Repeta parola&#9913</label>
+            <label for="repeta-parola">Repeta parola&#9913;</label>
             <input type="password" name="repeta-parola" placeholder="Introdu din nou parola" required>
 
             <button type="submit" id="inregistrare-cont-utilizator">Inregistrare</button>
             <label for="termeni-cond">
-               <input type="checkbox" checked="checked" name="termeni-cond" required> Am citit si sunt de acord cu <span id="citit-acord">Termenii si conditiile generale</span>
+               <input type="checkbox" checked="checked" name="termeni-cond" id="termeni-cond" required> Am citit si sunt de acord cu <span id="citit-acord">Termenii si conditiile generale</span>
             </label>
         </div>
     </div>
