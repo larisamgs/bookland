@@ -386,6 +386,7 @@
             }
             
             .img-book-genre-div {
+                position: relative;
                 width: 240px;
                 height: 340px;
                 box-sizing: border-box;
@@ -399,6 +400,21 @@
                 height: 100%;
                 box-sizing: border-box;
                 padding: 0;
+            }
+            
+            .heart-fav {
+                position: absolute;
+                bottom: 1rem;
+                right: 1.4rem;
+                padding: 1px;
+                font-size: xx-large;
+                color: white;
+            }
+            
+            .heart-fav:hover,
+            .heart-fav:focus {
+                color: rgb(190, 119, 12);
+                transform: scale(1.5);
             }
             
             .more-details-btn {
@@ -438,22 +454,45 @@
                 position: relative;
             }
             
-            .bookBuy-modal:hover {
+            .modalElements {
+                box-sizing: border-box;
+            }
+            
+            .modalElements .bookDescription-modal {
+                text-align: justify;
+                line-height: 1.6;
+            }
+            
+            .bookBuy-modal,
+            .bookFav-modal {
+                display: block;
+                width: 40%;
+                height: 10%;
+                box-sizing: border-box;
+                padding: 0.5rem;
+                margin: 0 auto;
+                margin-top: 0.5rem;
+            }
+            
+            .bookFav-modal {
+                padding: 0.3125rem;
+                margin-bottom: 0.5rem;
+                box-sizing: border-box;
+            }
+            
+            .bookBuy-modal:hover,
+            .bookFav-modal:hover {
                 cursor: pointer;
                 background-color: #fcf9f5;
                 color: #402703;
             }
             
-            .modalElements {
-                text-align: center;
-            }
-            
-            .bookDescription-modal {
-                line-height: 1.6;
-            }
-            
-            .modalElements .bookDescription-modal {
-                text-align: justify;
+            .heart-modal {
+                color: #e4caa6;
+                padding: 0;
+                padding-right: 0.3125rem;
+                font-size: x-large;
+                box-sizing: border-box;
             }
             
             .close-modal {
@@ -507,7 +546,7 @@
                 font-size: 90%;
                 color: rgb(190, 119, 12);
             }
-            /* books new-account style*/
+            /* books new-account styling*/
             
             #inregistr-cont-nou-container {
                 width: 100%;
@@ -593,6 +632,64 @@
             #citit-acord {
                 font-weight: bold;
             }
+            /* favorites-page styling */
+            
+            #favorites-page-section {
+                max-width: 1200px;
+                margin: auto;
+                margin-top: 5rem;
+            }
+            
+            #favorites-page-section-title {
+                color: rgb(190, 119, 12);
+                text-align: center;
+                margin-bottom: 3rem;
+            }
+            
+            #favorites-page-section-title>h2 {
+                padding-left: 5.5rem;
+                margin: 0;
+            }
+            
+            .favorites-page-books-container {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: auto;
+                row-gap: 1vh;
+            }
+            
+            .favorites-page-books {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+            }
+            
+            .favorites-page-books-main-details {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .favorites-page-books-main-details>h4,
+            p {
+                margin: 0.3125rem 0;
+                padding: 0;
+            }
+            
+            .favorites-page-books-main-details:last-child {
+                margin: 0.3125rem 0;
+            }
+            
+            .favorites-page-books-image-cont {
+                width: 120px;
+                height: 200px;
+            }
+            
+            .favorites-page-books-image-cont>img {
+                max-width: 100%;
+                height: auto;
+            }
             /* media queries */
             
             @media screen and (max-width: 980px) {
@@ -623,6 +720,12 @@
                 }
                 .modal-content {
                     width: 90%;
+                }
+                .favorites-page-books-container {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+                #favorites-page-section-title {
+                    font-size: 100%;
                 }
             }
             
@@ -664,6 +767,9 @@
                     flex-direction: column;
                     width: 75%;
                 }
+                #favorites-page-section-title {
+                    font-size: 95%;
+                }
             }
             
             @media screen and (max-width: 780px) {
@@ -701,6 +807,19 @@
                 }
                 footer {
                     font-size: 85%;
+                }
+                .bookBuy-modal,
+                .bookFav-modal {
+                    font-size: 85%;
+                }
+                .heart-modal {
+                    font-size: large;
+                }
+                #favorites-page-section-title {
+                    font-size: 90%;
+                }
+                #favorites-page-section-title>h2 {
+                    padding-left: 5rem;
                 }
             }
             
@@ -768,6 +887,22 @@
                 #inregistrare-cont-utilizator {
                     font-size: x-small;
                 }
+                .heart-fav {
+                    font-size: x-large;
+                }
+                .bookBuy-modal,
+                .bookFav-modal {
+                    width: 50%;
+                }
+                .favorites-page-books-container {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+                #favorites-page-section-title {
+                    font-size: 80%;
+                }
+                #favorites-page-section-title>h2 {
+                    padding-left: 1.5rem;
+                }
             }
             
             @media screen and (max-width: 570px) {
@@ -814,6 +949,13 @@
                 }
                 #inregistrare-cont-utilizator {
                     font-size: xx-small;
+                }
+                .modalImg img {
+                    max-width: 100%;
+                }
+                .bookBuy-modal,
+                .bookFav-modal {
+                    width: 60%;
                 }
             }
             
@@ -866,5 +1008,11 @@
                 #article-links,
                 #contact-us {
                     text-align: center;
+                }
+                .favorites-page-books-container {
+                    grid-template-columns: 1fr;
+                }
+                #favorites-page-section-title>h2 {
+                    padding-left: 0.25rem;
                 }
             }
